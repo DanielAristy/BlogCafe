@@ -15,6 +15,9 @@ body{
 /*Globales*/
 .contenedor{
     max-width: 120rem;/*Tamaño del contenedor*/
+    width: 95%;/*Cambiar un poco el tamaño para que se vea bien la imagen
+                 y no se muestre las letras en las esquinas y sea un poco mas
+                 dificil de leer*/
     margin: 0 auto;
 }
 
@@ -115,6 +118,52 @@ img{
 
 .texto-header p{
     font-size: 2.2rem;
+}
+
+/*Contendo Principal home*/
+
+.contenido-principal{
+    display: flex; /*Colocar uno al frente de otro comentar y mirar el resultado*/
+    flex-wrap: wrap; /*Cuando se pase el diseño para que sea responsive se pone debajo
+                       cuando se hace display flex para poner para poner otros elemento
+                       al lado derecho de ellos y cambiar un pcoo su estilo*/
+}
+
+.blog,
+.cursos {
+    flex: 0 0 100;/*Ahorro de trabajo en vez de poner flex-grow: 0;
+                    flex-shrink: 0; , flex-basis: 100%; */
+}
+
+.cursos{
+    order: -1 ; /*En este caso queremos poner por recomendaciones del curso primero
+                  los cursos y despues el blog*/
+}
+
+@media (min-width: 768px) {
+    .contenido-principal{
+        justify-content: space-between; /*Separacion con el siguiente elemento*/
+    }
+    .blog{
+        flex-basis: 66.6%; /*Tres cuartas partes*/
+      
+    }
+    .cursos{
+        flex-basis: calc(33.3% - 4rem); /*Organizar el diseño para que se adecue a un dispositivo movil
+                                         y darle un poco de separacion con el siguiente elemento*/
+        order: 2; /*Organizarlo a las derecha del otro elemento*/
+    }
+    
+}
+
+/*Opcional*/
+.entrada-blog{
+   margin-bottom: 2rem;
+   border-bottom: 1px solid #e1e1e1; /*Separador en cada una de las entradas del blog*/
+}
+
+.entrada-blog:last-of-type{
+    border: none;
 }
 
 
