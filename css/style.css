@@ -30,8 +30,11 @@ h1{
     font-size: 4.8rem;
 }
 
-h2{
+h2
+{
     font-size: 4rem;
+    line-height: 1.2;
+
 }
 
 h3{
@@ -52,6 +55,37 @@ img{
 
 .no-margin{
     margin: 0;
+}
+
+/*Botones de los enlaces*/
+.boton{
+    display: block;
+    text-align: center;
+    padding: 1rem, 3rem;
+    margin: 2rem, 0;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+@media (min-width: 600px) { /*Despues de cierto tamaño se amplia el boton*/ 
+    .boton{
+       display: inline-block;/*volver le boton mas pequeño cuando llegue a su tamaño*/
+    }
+}
+
+.boton:hover{
+    cursor: pointer;
+}
+
+.boton-primario{
+    background-color: #000000;
+}
+
+.boton-secundario{
+    background-color: #784d3c;
 }
 
 /*Header*/
@@ -90,6 +124,8 @@ img{
     text-align: center;
     display: block;
     font-size: 2rem;
+    text-decoration: none;
+    color: #ffffff;
 }
 
 @media (min-width: 768px) {/*Utilizando el tamaño de una tablet*/
@@ -166,5 +202,48 @@ img{
     border: none;
 }
 
+/*Cursos Sidebar */
 
+.cursos-lista{
+    padding: 0; /*Quitar la ceparacion*/
+    list-style: none; /*Eliminar la viñeta que se crea por defecto*/
+}
 
+.curso{
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.curso:last-of-type{
+    border: none; /*Quitar el ultimo borde de los cursos*/ 
+}
+
+.curso p {
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;/*Textos de los parrafos mas grandes*/
+}
+
+.curso p span{
+    font-weight: 400;
+}
+
+/*Footer*/
+
+.site-footer{
+    background-color: #000000;
+    padding: 3rem;
+    margin-top: 4rem;
+}
+
+.site-footer p{
+    color: #ffffff;
+    font-size: 4rem;
+    font-weight: 400;
+    font-family: 'PT Sans', sans-serif;
+    text-align: center;
+}
+
+.site-footer p span{
+    font-weight: 700;
+}
