@@ -57,6 +57,25 @@ img{
     margin: 0;
 }
 
+/*Grid*/
+@media (min-width: 768px) {
+    .grid{
+        display: flex;
+        justify-content: space-between;
+    }
+    .columnas-4{
+        flex: 0 0 calc(33.3% - 1rem);
+    }
+    .columnas-6{
+        flex: 0 0 calc(50% - 1rem); /*Cada elemento en este caso ocupa el 50% del espacio disponible*/
+    }
+    
+    .columnas-8{
+        flex: 0 0 calc(66.6% - 1rem);
+    }
+}
+
+
 /*Botones de los enlaces*/
 .boton{
     display: block;
@@ -210,6 +229,7 @@ img{
 }
 
 .curso{
+    padding-top: 3rem;
     margin-bottom: 2rem;
     border-bottom: 1px solid #e1e1e1;
 }
@@ -224,7 +244,8 @@ img{
     font-size: 2rem;/*Textos de los parrafos mas grandes*/
 }
 
-.curso p span{
+.curso p span,
+.curso p.descripcion{
     font-weight: 400;
 }
 
@@ -247,3 +268,5 @@ img{
 .site-footer p span{
     font-weight: 700;
 }
+
+
