@@ -62,6 +62,14 @@ img{
     .grid{
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;/*Esto sirve en el caso de elementos del contacto que no se vayan hacia
+                         el lado derecho como se veia anteriormente*/
+    }
+
+    .centrar-columnas{/*En este caso es para centrar el fomulario de contacto en el centro de la imagen con las 
+                        siguiente instrucciones*/
+        justify-content: center;
+
     }
     .columnas-4{
         flex: 0 0 calc(33.3% - 1rem);
@@ -72,6 +80,15 @@ img{
     
     .columnas-8{
         flex: 0 0 calc(66.6% - 1rem);
+    }
+
+    .columnas-10{/*En este caso es la separacion que hay entre la foto y el formulario granja blanca
+                  de contacto*/
+        flex: 0 0 calc(83.3% - 1rem);
+    }
+
+    .columnas-12{
+        flex: 0 0 100%;
     }
 }
 
@@ -87,11 +104,13 @@ img{
     font-family: 'PT Sans', sans-serif;
     font-weight: 700;
     text-transform: uppercase;
+    flex: 0 0 100%
 }
 
 @media (min-width: 600px) { /*Despues de cierto tamaño se amplia el boton*/ 
     .boton{
        display: inline-block;/*volver le boton mas pequeño cuando llegue a su tamaño*/
+       flex: 0 0 auto;/*Este sirve para el tamaña del boton cuando la pagina cresca*/
     }
 }
 
@@ -269,4 +288,39 @@ img{
     font-weight: 700;
 }
 
+/*Contacto*/
+.formulario-contacto{
+    background-color: #ffffff;
+    padding: 5rem;
+}
+@media (min-width: 768px) {/*En este caso se usa media queries porque en el ejemplo cuando esta la pantalla
+    al 100% solo esta encimado sobre la imagen, pero cuando se reduce la pantalla 
+    el formulario cambio el estilo a la forma de mostrarse*/
+    .formulario-contacto{
+        margin-top: -10rem;/*Esta funcion sirve para subir los campos del contacto hacia la imgen*/
+    }
+    
+}
+.formulario-contacto .campo{/*Selector padre*/
+    display: flex;
+    justify-content: space-between; /*Para separar el texto con las cajas de texto*/
+    margin-bottom: 2rem;/*Separacion hacia abajo en cada uno de los input del formulario de contacto*/
+}
+.formulario-contacto .campo label {
+    flex: 0 0 8rem;/*Espacio entre el texto y el input*/
+}
+.formulario-contacto .campo input:not([type="submit"]),
+.formulario-contacto textarea {
+    flex: 1;/*En este caso es para que todo el input tome todo el tamaña restante del espacio*/
+    border: 1px solid #e1e1e1;
+    padding: 1rem;
+    
+}
+.formulario-contacto textarea{
+    height: 20rem;
+}
+.formulario-contacto .enviar{
+    display: flex;
+    justify-content: flex-end;
 
+}
