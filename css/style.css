@@ -1,326 +1,267 @@
-html{
+html {
     box-sizing: border-box;
-    font-size: 62.5%; /*Reset para Rems -62.5% -> 1rem = 10px uso mejor de rem para dispositivos moviles*/
+    font-size: 62.5%; /** 1rem = 10px **/
 }
 *, *:before, *:after {
     box-sizing: inherit;
 }
-
-body{
+body {
     font-family: 'Open Sans', sans-serif;
     font-size: 1.6rem;
-    line-height: 2;/*Interlineado*/
+    line-height: 2;
 }
-
-/*Globales*/
-.contenedor{
-    max-width: 120rem;/*Tamaño del contenedor*/
-    width: 95%;/*Cambiar un poco el tamaño para que se vea bien la imagen
-                 y no se muestre las letras en las esquinas y sea un poco mas
-                 dificil de leer*/
+/** Globales **/
+.contenedor {
+    max-width: 1200px;
+    width: 95%;
     margin: 0 auto;
 }
-
-h1, h2, h3, h4{/*Tipo de fuente que van a utilizar los encabezados*/
+h1, h2, h3, h4 {
     font-family: 'PT Sans', sans-serif;
 }
-
-/*Tamaño de los encabezados*/
-h1{
+h1 {
     font-size: 4.8rem;
 }
-
-h2
-{
+h2 {
     font-size: 4rem;
     line-height: 1.2;
-
 }
-
-h3{
+h3 {
     font-size: 3.2rem;
 }
 h4{
     font-size: 2.8rem;
 }
-
-img{
-    max-width: 100%;/*Esta parte  sirve para que se adapten en su contenedor*/
+img {
+    max-width: 100%;
 }
-
-/*Utilidades*/
-.centrar-texto{
+/** Utilidades **/
+.centrar-texto {
     text-align: center;
 }
-
-.no-margin{
+.no-margin {
     margin: 0;
 }
 
-/*Grid*/
+/** Grid **/
 @media (min-width: 768px) {
-    .grid{
+    .grid {
         display: flex;
         justify-content: space-between;
-        flex-wrap: wrap;/*Esto sirve en el caso de elementos del contacto que no se vayan hacia
-                         el lado derecho como se veia anteriormente*/
+        flex-wrap: wrap;
     }
-
-    .centrar-columnas{/*En este caso es para centrar el fomulario de contacto en el centro de la imagen con las 
-                        siguiente instrucciones*/
+    .centrar-columnas {
         justify-content: center;
-
     }
-    .columnas-4{
+    .columnas-4 {
         flex: 0 0 calc(33.3% - 1rem);
     }
-    .columnas-6{
-        flex: 0 0 calc(50% - 1rem); /*Cada elemento en este caso ocupa el 50% del espacio disponible*/
+    .columnas-6 {
+        flex: 0 0 calc(50% - 1rem);
     }
-    
-    .columnas-8{
+    .columnas-8 {
         flex: 0 0 calc(66.6% - 1rem);
     }
-
-    .columnas-10{/*En este caso es la separacion que hay entre la foto y el formulario granja blanca
-                  de contacto*/
+    .columnas-10 {
         flex: 0 0 calc(83.3% - 1rem);
     }
-
-    .columnas-12{
+    .columnas-12 {
         flex: 0 0 100%;
     }
 }
 
-
-/*Botones de los enlaces*/
-.boton{
+/** Botones **/
+.boton {
     display: block;
     text-align: center;
-    padding: 1rem, 3rem;
-    margin: 2rem, 0;
-    text-decoration: none;
+    padding: 1rem 3rem;
+    margin: 2rem 0;
     color: #ffffff;
+    text-decoration: none;
     font-family: 'PT Sans', sans-serif;
     font-weight: 700;
     text-transform: uppercase;
-    flex: 0 0 100%
+    font-size: 2rem;
+    flex: 0 0 100%;
 }
-
-@media (min-width: 600px) { /*Despues de cierto tamaño se amplia el boton*/ 
-    .boton{
-       display: inline-block;/*volver le boton mas pequeño cuando llegue a su tamaño*/
-       flex: 0 0 auto;/*Este sirve para el tamaña del boton cuando la pagina cresca*/
+.boton:hover {
+    cursor: pointer;
+}
+@media (min-width: 768px) {
+    .boton {
+        display: inline-block;
+        flex: 0 0 auto;
     }
 }
 
-.boton:hover{
-    cursor: pointer;
-}
-
-.boton-primario{
+.boton-primario {
     background-color: #000000;
 }
-
-.boton-secundario{
+.boton-secundario {
     background-color: #784d3c;
 }
 
-/*Header*/
-@media (min-width: 768px){/*Media Queries para utilizar cuando se reduzca la pagina adopte una nueva forma*/
-    .barra{
+/** Header **/
+@media (min-width:768px) {
+    .barra {
         display: flex;
         justify-content: space-between;
-        align-items: center;/*En este caso aline cada items de los enlaces para que estuviera
-                            a la par del h1 descomentar linear y ver los ajustes*/
+        align-items: center;
     }
 }
-
-.site-header{
+.site-header {
     background-image: url(../img/banner.jpg);
     background-repeat: no-repeat;
-    background-position: center center;/*mejorar la vista de la imagen*/
+    background-position: center center;
     background-size: cover;
-    height: 60rem;/*Ponerle una altura a nuestra imagen*/
+    height: 60rem;
 }
-
-.site-header a{
+.site-header a {
     color: #ffffff;
     text-decoration: none;
 }
-
-.site-header h1{
+.site-header h1 {
     text-align: center;
     font-weight: 400;
 }
-.site-header h1 span{
+.site-header h1 span {
     font-weight: 700;
 }
-
-/*Navegacion*/
-.navegacion a{
+/** Navegacion **/
+.navegacion a {
     text-align: center;
     display: block;
-    font-size: 2rem;
-    text-decoration: none;
+    font-size: 1.8rem;
     color: #ffffff;
+    text-decoration: none;
 }
-
-@media (min-width: 768px) {/*Utilizando el tamaño de una tablet*/
+@media (min-width: 768px) {
     .navegacion a {
-        display: inline;/*En este caso pongo los enlaces en linea*/
-        margin-right: 2rem;/*Separacion entre items de los enlaces*/
+        display: inline;
+        margin-right: 2rem;
     }
-    .navegacion a:last-of-type{/*Eliminar franja a los ultimos de los enlaces*/
+    .navegacion a:last-of-type {
         margin: 0;
     }
 }
 
-/*Texto header*/
-.texto-header{
+/** header texto **/
+.texto-header {
     color: #ffffff;
     text-align: center;
-    margin-top: 5rem;/*Separacion entre los textos que se encuentran en el header*/
+    margin-top: 5rem;
 }
-
 @media (min-width: 768px) {
     .texto-header{
-        margin-top: 15rem;/*Un poco mas de separacion entre el los enlaces de la barra
-                            y el texto*/
+        margin-top: 15rem;
     }
 }
-
-.texto-header p{
+.texto-header p {
     font-size: 2.2rem;
 }
 
-/*Contendo Principal home*/
-
-.contenido-principal{
-    display: flex; /*Colocar uno al frente de otro comentar y mirar el resultado*/
-    flex-wrap: wrap; /*Cuando se pase el diseño para que sea responsive se pone debajo
-                       cuando se hace display flex para poner para poner otros elemento
-                       al lado derecho de ellos y cambiar un pcoo su estilo*/
+/** Contenido Principal HOME **/
+.contenido-principal {
+    display: flex;
+    flex-wrap: wrap;
 }
-
-.blog,
+.blog, 
 .cursos {
-    flex: 0 0 100;/*Ahorro de trabajo en vez de poner flex-grow: 0;
-                    flex-shrink: 0; , flex-basis: 100%; */
+    flex: 0 0 100%;
 }
-
-.cursos{
-    order: -1 ; /*En este caso queremos poner por recomendaciones del curso primero
-                  los cursos y despues el blog*/
+.cursos {
+    order: -1;
 }
 
 @media (min-width: 768px) {
-    .contenido-principal{
-        justify-content: space-between; /*Separacion con el siguiente elemento*/
+    .contenido-principal {
+        justify-content: space-between;
     }
-    .blog{
-        flex-basis: 66.6%; /*Tres cuartas partes*/
-      
+    .blog {
+        flex-basis: 66.6%;
     }
-    .cursos{
-        flex-basis: calc(33.3% - 4rem); /*Organizar el diseño para que se adecue a un dispositivo movil
-                                         y darle un poco de separacion con el siguiente elemento*/
-        order: 2; /*Organizarlo a las derecha del otro elemento*/
+    .cursos {
+        flex-basis: calc(33.3% - 4rem);
+        order: 2;
     }
-    
 }
 
-/*Opcional*/
-.entrada-blog{
-   margin-bottom: 2rem;
-   border-bottom: 1px solid #e1e1e1; /*Separador en cada una de las entradas del blog*/
-}
-
-.entrada-blog:last-of-type{
-    border: none;
-}
-
-/*Cursos Sidebar */
-
-.cursos-lista{
-    padding: 0; /*Quitar la ceparacion*/
-    list-style: none; /*Eliminar la viñeta que se crea por defecto*/
-}
-
-.curso{
-    padding-top: 3rem;
+/** Opcional **/
+.entrada-blog {
     margin-bottom: 2rem;
     border-bottom: 1px solid #e1e1e1;
 }
-
-.curso:last-of-type{
-    border: none; /*Quitar el ultimo borde de los cursos*/ 
+.entrada-blog:last-of-type{
+    border: none;
 }
-
+/** Cursos Sidebar **/
+.cursos-lista {
+    padding: 0;
+    list-style: none;
+}
+.curso {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid #e1e1e1;
+}
+.curso:last-of-type {
+    border-bottom: none;
+}
 .curso p {
     font-family: 'PT Sans', sans-serif;
     font-weight: 700;
-    font-size: 2rem;/*Textos de los parrafos mas grandes*/
+    font-size: 2rem;
 }
-
 .curso p span,
-.curso p.descripcion{
+.curso p.descripcion  {
     font-weight: 400;
 }
 
-/*Footer*/
-
-.site-footer{
+/** Footer **/
+.site-footer {
     background-color: #000000;
     padding: 3rem;
     margin-top: 4rem;
 }
-
-.site-footer p{
+.site-footer p {
     color: #ffffff;
     font-size: 4rem;
     font-weight: 400;
     font-family: 'PT Sans', sans-serif;
     text-align: center;
 }
-
-.site-footer p span{
+.site-footer p span {
     font-weight: 700;
 }
 
-/*Contacto*/
-.formulario-contacto{
+/** Contacto **/
+.formulario-contacto {
     background-color: #ffffff;
     padding: 5rem;
 }
-@media (min-width: 768px) {/*En este caso se usa media queries porque en el ejemplo cuando esta la pantalla
-    al 100% solo esta encimado sobre la imagen, pero cuando se reduce la pantalla 
-    el formulario cambio el estilo a la forma de mostrarse*/
-    .formulario-contacto{
-        margin-top: -10rem;/*Esta funcion sirve para subir los campos del contacto hacia la imgen*/
+@media (min-width: 768px) {
+    .formulario-contacto {
+        margin-top: -10rem;
     }
-    
 }
-.formulario-contacto .campo{/*Selector padre*/
+.formulario-contacto .campo {
     display: flex;
-    justify-content: space-between; /*Para separar el texto con las cajas de texto*/
-    margin-bottom: 2rem;/*Separacion hacia abajo en cada uno de los input del formulario de contacto*/
+    justify-content: space-between;
+    margin-bottom: 2rem;
 }
 .formulario-contacto .campo label {
-    flex: 0 0 8rem;/*Espacio entre el texto y el input*/
+    flex: 0 0 8rem;
 }
 .formulario-contacto .campo input:not([type="submit"]),
-.formulario-contacto textarea {
-    flex: 1;/*En este caso es para que todo el input tome todo el tamaña restante del espacio*/
+.formulario-contacto textarea{
+    flex: 1;
     border: 1px solid #e1e1e1;
     padding: 1rem;
-    
 }
-.formulario-contacto textarea{
+.formulario-contacto textarea {
     height: 20rem;
 }
-.formulario-contacto .enviar{
+.formulario-contacto .enviar {
     display: flex;
     justify-content: flex-end;
-
 }
