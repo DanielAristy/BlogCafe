@@ -218,10 +218,12 @@ img {
 }
 
 /** Footer **/
-.site-footer {
+.site-footer{
     background-color: #000000;
-    padding: 3rem;
-    margin-top: 4rem;
+
+}
+.site-footer p span {
+    font-weight: 700;
 }
 .site-footer p {
     color: #ffffff;
@@ -230,10 +232,19 @@ img {
     font-family: 'PT Sans', sans-serif;
     text-align: center;
 }
-.site-footer p span {
-    font-weight: 700;
+.site-footer {
+    padding: 3rem;
+    margin-top: 4rem;
 }
+.site-footer nav{
+    display: none;
+}
+@media (min-width: 768px) {
+    .site-footer nav{
+        display: block;
+    }
 
+}
 /** Contacto **/
 .formulario-contacto {
     background-color: #ffffff;
