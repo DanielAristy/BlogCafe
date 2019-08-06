@@ -144,6 +144,26 @@ img {
         margin: 0;
     }
 }
+.mobile-menu img{
+    width: 5rem;
+  }
+  @media (min-width: 768px) {
+    .mobile-menu{
+      display: none     
+    }
+  }
+  .navegacion{/*En este caso se utiliza para que no se vean los iconos solo si
+                utilizan el icono de menu*/
+    display: none
+  }
+  .navegacion:target{/*Cuando damos click en las barras nos muestra los demas links*/
+    display: block
+  }
+  @media (min-width: 768px) {
+    .navegacion{
+      display: block
+    }
+  }
 
 /** header texto **/
 .texto-header {
